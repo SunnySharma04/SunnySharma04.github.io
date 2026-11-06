@@ -1850,3 +1850,66 @@ button{
     transform:none;
   }
 }
+
+/* === Sunny portfolio: security-projects + two-resume upgrade (Nov 2026) === */
+.isoah-experience { margin-bottom: 26px; }
+.portfolio-resume-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px; max-width: 1120px; margin-inline: auto;
+}
+.portfolio-resume-card, .portfolio-security-card, .portfolio-evidence-strip {
+  background: linear-gradient(148deg,rgba(28,19,13,.96),rgba(13,9,7,.96));
+  border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.portfolio-resume-card {
+  padding: clamp(22px,3vw,38px); display:flex; flex-direction:column;
+}
+.portfolio-resume-number {
+  display:grid; place-items:center; width:50px; height:50px;
+  border-radius:14px; border:1px solid rgba(249,115,22,.42);
+  color:var(--cyan); background:rgba(249,115,22,.07);
+  font-size:1.1rem; font-weight:900; margin-bottom:22px;
+}
+.portfolio-resume-card h3,.portfolio-security-card h3 {
+  font-size:clamp(1.5rem,2.5vw,2rem); margin:0 0 12px; line-height:1.2;
+}
+.portfolio-resume-card > p:not(.eyebrow),
+.portfolio-security-card > p:not(.eyebrow),.portfolio-evidence-strip p,
+.portfolio-resume-note {color:var(--muted);}
+.portfolio-resume-card .tag-row {margin-top:auto; padding-top:14px;}
+.portfolio-resume-actions {display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:27px;}
+.portfolio-resume-actions .btn {text-align:center;}
+.portfolio-simple-link {color:var(--blue);font-weight:750;}
+.portfolio-simple-link:hover,.portfolio-project-link:hover {text-decoration:underline;text-underline-offset:4px;}
+.portfolio-resume-note {text-align:center;font-size:.9rem;margin:24px 0 0;}
+.portfolio-security-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.portfolio-security-card {padding:clamp(22px,2vw,32px);min-width:0;display:flex;flex-direction:column;}
+.portfolio-security-card-heading {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:22px;}
+.portfolio-project-type {text-transform:uppercase;letter-spacing:.11em;font-size:.7rem;color:var(--cyan);font-weight:800;}
+.portfolio-security-card .feature-list {font-size:.95rem; padding-left:19px;}
+.portfolio-security-card .tag-row {margin-top:auto; padding-top:16px;}
+.portfolio-security-footnote {font-size:.82rem;line-height:1.5;}
+.portfolio-security-card .portfolio-security-footnote {margin-bottom:0;}
+.portfolio-project-link {display:inline-flex;align-self:flex-start;min-height:44px;align-items:center;
+  margin-top:19px;color:var(--blue);font-weight:800;}
+.portfolio-progress-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0;}
+.portfolio-progress-grid > div {border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(249,115,22,.03);}
+.portfolio-progress-grid strong {display:block;font-size:1.5rem;color:var(--text);}
+.portfolio-progress-grid span {display:block;color:var(--muted);font-size:.8rem;line-height:1.35;}
+.portfolio-evidence-strip {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:30px;padding:clamp(22px,3vw,38px);margin-top:24px;}
+.portfolio-evidence-strip > div:first-child {flex:1 1 360px;}
+.portfolio-evidence-strip h3 {font-size:1.35rem;margin:0 0 10px;}
+.portfolio-evidence-strip .eyebrow {font-size:.75rem;}
+.portfolio-evidence-actions {display:flex;flex-wrap:wrap;gap:12px;}
+.portfolio-disclaimer {text-align:center;margin-top:23px;}
+@media(max-width:1080px){.portfolio-security-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:740px){
+  .portfolio-resume-grid,.portfolio-security-grid {grid-template-columns:1fr;}
+  .portfolio-resume-card,.portfolio-security-card {padding:24px;}
+  .portfolio-resume-actions .btn {width:100%;}
+  .portfolio-evidence-strip {padding:24px;}
+  .portfolio-evidence-actions,.portfolio-evidence-actions .btn {width:100%;}
+}
+@media(max-width:380px){.portfolio-security-card-heading {flex-direction:column;align-items:flex-start;}}
+@media(prefers-reduced-motion:reduce){.portfolio-resume-card .btn,.portfolio-security-card .btn{transition:none;}}
